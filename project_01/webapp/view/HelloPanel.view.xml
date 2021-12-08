@@ -1,0 +1,25 @@
+<mvc:View
+    controllerName="com.fiori.project01.controller.HelloPanel"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+<Panel headerText="panel1Header">
+    <content>
+        <l:VerticalLayout class="sapUiContentPadding">
+            <Button icon="sap-icon://download" text="{i18n>btn-hello}" press="onShowHello"/>
+            <Text text="{mPrice>/product/name}"></Text>
+            <Text binding="{mPrice>/product}" text="{mPrice>price}"></Text>
+            <Text text="{/date}"></Text>
+            <Text text="{
+                path: '/date',
+                type: 'sap.ui.model.type.Date',
+                formatOptions: {
+                    style: 'short'
+                }
+            }"></Text>
+        </l:VerticalLayout>
+    </content>
+</Panel>
+</mvc:View>

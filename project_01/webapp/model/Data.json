@@ -1,0 +1,43 @@
+{
+    "Prefecture": [
+        {"name": "北海道"},
+        {"name": "青森"},
+        {"name": "秋田"},
+        {"name": "岩手"},
+        {"name": "宮城"},
+        {"name": "福島"},
+        {"name": "茨城"}
+    ],
+    "Sports": [
+        {"name": "サッカー"},
+        {"name": "野球"},
+        {"name": "バスケットボール"},
+        {"name": "野球"},
+        {"name": "水泳"},
+        {"name": "陸上"},
+        {"name": "テニス"}
+    ],
+    "Products": [
+        {
+            "name": "あずきもなか",
+            "price": 105,
+            "currency": "JPY",
+            "ingredients": "牛乳、砂糖、小豆",
+            "producer": "大納言農場"
+        },
+        {
+            "name": "いちごアイス",
+            "price": 120,
+            "currency": "JPY",
+            "ingredients": "牛乳、砂糖、いちご",
+            "producer": "とよのかファーム"
+        },
+        {
+            "name": "ヨーグルトアイス",
+            "price": 160,
+            "currency": "JPY",
+            "ingredients": "ヨーグルト",
+            "producer": "カスピ海工房"
+        }       
+    ]
+}

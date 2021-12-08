@@ -1,0 +1,6 @@
+{ 
+    "product" : {
+        "name" : "pumpkin",
+        "price": 150
+    }
+}

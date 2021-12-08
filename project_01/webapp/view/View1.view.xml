@@ -1,0 +1,93 @@
+<mvc:View 
+    controllerName="com.fiori.project01.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+<Shell id="shell">
+    <App id="app">
+        <pages>
+            <Page id="page" title="{i18n>title}">
+                <content>
+                    <mvc:XMLView viewName="com.fiori.project01.view.HelloPanel"/>
+                    <Panel headerText="panel2Header">
+                        <content>
+                            <List 
+                                id="productList"
+                                items="{
+                                    path: 'mPriceList>/products',
+                                    sorter: {
+                                        path: 'category',
+                                        group: true
+                                    }
+                                }">
+                                <headerToolbar>
+                                    <Toolbar>
+                                        <Title width="100%" text="Products"/>
+                                        <SearchField search="onFilterProducts"/>                                        
+                                    </Toolbar>
+                                </headerToolbar>
+                                <items>
+                                    <ObjectListItem 
+                                        title="{mPriceList>name}"
+                                        number="{
+                                            parts: [
+                                                {path: 'mPriceList>price'},
+                                                {path: 'mPriceList>currency'}
+                                            ],
+                                            type: 'sap.ui.model.type.Currency',
+                                            formatOptions: {
+                                                showMeasure: false
+                                            }
+                                        }"
+                                        numberUnit="{mPriceList>currency}">
+                                        <attributes>
+                                            <ObjectAttribute text="{mPricelist>stock}"/>
+                                        </attributes>
+                                        <firstStatus>
+                                            <ObjectStatus 
+                                            text="{
+                                                path: 'mPricelist>stock',
+                                                formatter: '.formatter.stockStatus'
+                                            }"/>
+                                        </firstStatus>
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </Panel>
+                    <!-- ValueHelpPanel START -->
+                    <mvc:XMLView viewName="com.fiori.project01.view.ValueHelpPanel"/>
+                    <!-- ValueHelpPanel END --><!-- ProductPanel START -->
+                    <Panel headerText="商品">
+                        <content>
+                            <List
+                                id="idList" 
+                                items="{mProducts>/Products}"
+                                headerText="アイスクリーム"
+                                selectionChange="onSelect" 
+                                mode="SingleSelectMaster">
+                                <items>
+                                    <ObjectListItem 
+                                        type="Navigation"
+                                        title="{mProducts>name}"
+                                        number="{
+                                            parts:[{path:'mProducts>price'},{path:'mProducts>currency'}],
+                                            type: 'sap.ui.model.type.Currency',
+                                            formatOptions: {showMeasure: false}
+                                        }"
+                                        numberUnit="{mProducts>currency}">
+                                    </ObjectListItem>
+                                </items>
+                            </List>
+                        </content>
+                    </Panel>
+                    <!-- ProductPanel END -->
+                </content>
+            </Page>
+        </pages>
+    </App>
+</Shell>
+</mvc:View>

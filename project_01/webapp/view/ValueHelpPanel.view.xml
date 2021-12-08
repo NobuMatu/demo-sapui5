@@ -1,0 +1,21 @@
+<mvc:View 
+    controllerName="com.fiori.project01.controller.ValueHelpPanel"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+<Panel headerText="ValueHelpFragment">
+    <content>
+        <form:SimpleForm>
+            <form:content>
+                <Label text="{i18n>valueHelp-todoufuken}" labelFor="idPref"/>
+                <Input id="idPref" showValueHelp="true" valueHelpRequest="onValueHelp1"/>
+
+                <Label text="{i18n>valueHelp-sukiSports}" labelFor="idSport"/>
+                <Input id="idSport" showValueHelp="true" valueHelpRequest="onValueHelp2"/>    
+            </form:content>
+        </form:SimpleForm>
+    </content>
+</Panel>
+</mvc:View>

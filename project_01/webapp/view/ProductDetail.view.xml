@@ -1,0 +1,23 @@
+<mvc:View 
+    controllerName="com.fiori.project01.controller.ProductDetail" 
+    xmlns="sap.m" 
+    xmlns:f="sap.ui.layout.form" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core">
+    <Page title="{i18n>detailPageTitle}">
+        <content>
+            <f:SimpleForm id="SimpleForm" editable="true" title="商品詳細">
+                <f:content>
+                    <Label text="商品名"/>
+                    <Text id="name" text="{mProducts>name}"/>
+                    <Label text="価格"/>
+                    <Text id="price" text="{mProducts>price} {mProducts>currency}"/>
+                    <Label text="原料"/>
+                    <Text id="ingredients" text="{mProducts>ingredients}"/>   
+                    <Label text="生産者"/>
+                    <Text id="producer" text="{mProducts>producer}"/>                             
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

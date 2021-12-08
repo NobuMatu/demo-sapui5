@@ -1,0 +1,25 @@
+{
+    "Products": [
+        {
+            "name": "あずきもなか",
+            "price": 105,
+            "currency": "JPY",
+            "ingredients": "牛乳、砂糖、小豆",
+            "producer": "大納言農場"
+        },
+        {
+            "name": "いちごアイス",
+            "price": 120,
+            "currency": "JPY",
+            "ingredients": "牛乳、砂糖、いちご",
+            "producer": "とよのかファーム"
+        },
+        {
+            "name": "ヨーグルトアイス",
+            "price": 160,
+            "currency": "JPY",
+            "ingredients": "ヨーグルト",
+            "producer": "カスピ海工房"
+        }       
+    ]
+}
